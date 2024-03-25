@@ -1,0 +1,12 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:charts="com.unitrade.crm.charts"
+>
+    <charts:BaseChart
+        chartType="line"
+        datasets="{data>/dataset}"
+        labels="{data>/labels}"
+        height="30vh"
+        width="85vw"
+    />
+</mvc:View>

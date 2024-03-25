@@ -1,0 +1,8 @@
+<mvc:View
+    controllerName="com.unitrade.crm.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:charts="com.unitrade.crm.charts"
+>
+    <App id="app" />
+</mvc:View>

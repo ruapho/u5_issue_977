@@ -1,0 +1,97 @@
+{
+  "_version": "1.57.0",
+
+  "sap.app": {
+    "id": "com.unitrade.crm",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {},
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "com.unitrade.crm.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+
+    "dependencies": {
+      "minUI5Version": "1.118.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.ui.layout": {},
+        "sap.m": {},
+        "sap.tnt": {},
+        "sap.uxap": {},
+        "sap.ui.webc.main": {},
+        "sap.ui.webc.common": {}
+      }
+    },
+
+    "handleValidation": true,
+
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.unitrade.crm.i18n.i18n"
+        }
+      },
+      "data": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "./model/data.json"
+      }
+    },
+
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "com.unitrade.crm.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true,
+        "bypassed": {
+          "target": "notFound"
+        }
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "home",
+          "target": "home"
+        }
+      ],
+      "targets": {
+        "home": {
+          "viewId": "home",
+          "viewName": "Home"
+        },
+        "notFound": {
+          "viewId": "notFound",
+          "viewName": "NotFound"
+        }
+      }
+    }
+  }
+}
