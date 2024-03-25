@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist coverage",
     "build": "ui5 build --config ui5-dist.yaml self-contained --dest ./build --clean-dest -a",
-    "build:opt": "ui5 build --config ui5-dist.yaml --clean-dest --dest ./build",
+    "build:opt": "ui5 build --config ui5-dist.yaml --clean-dest --dest ./build --cache-mode Off --loglevel verbose",
     "start": "ui5 serve --port 8080",
     "start-cdn": "ui5 serve --port 8080 -o index-cdn.html",
     "start:dist": "npm start -- --config ui5-dist.yaml --accept-remote-connections",
